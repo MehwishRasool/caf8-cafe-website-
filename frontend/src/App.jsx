@@ -108,7 +108,7 @@ export default function App() {
 
       <Footer />
 
-      {!isAdmin && <DemoBanner />}
+            <DemoBanner />
     </div>
   );
 }

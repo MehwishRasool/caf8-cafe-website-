@@ -9,7 +9,8 @@
   "scripts": {
     "dev": "node --watch --env-file=.env src/server.js",
     "start": "node src/server.js",
-    "seed": "node --env-file=.env src/seedAdmin.js"
+        "seed": "node --env-file=.env src/seedAdmin.js",
+    "reset-demo": "node --env-file=.env src/resetDemo.js"
   },
   "dependencies": {
     "bcryptjs": "^3.0.3",

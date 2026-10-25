@@ -195,7 +195,12 @@ function parseItem(body = {}) {
 app.get("/api/health", (_req, res) => res.json({ ok: true }));
 
 // Tells the website whether this is a demo (it then shows a small notice)
-app.get("/api/site-info", (_req, res) => res.json({ demo: demoMode }));
+app.get("/api/site-info", (_req, res) =>
+  res.json({
+    demo: demoMode,
+    ownerLogin: demoMode ? (process.env.DEMO_OWNER_LOGIN ?? null) : null,
+  })
+);
 
 // Switch on DEBUG_IP=true for a moment after deploying, to check TRUST_PROXY
 if (DEBUG_IP === "true") {
