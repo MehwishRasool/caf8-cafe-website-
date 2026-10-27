@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 import { rateLimit } from "express-rate-limit";
 import { MenuItem } from "./models.js";
 import { RESERVATION, ORDERING, DELIVERY } from "./config.js";
-import { SITE_ORIGIN, originCheck } from "./Security.js";
+import { SITE_ORIGIN, originCheck } from "./security.js";
 import {
   createCheckout,
   demoMode,
